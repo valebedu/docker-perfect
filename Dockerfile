@@ -1,4 +1,4 @@
-FROM valentinbercot/swift:latest
+FROM valentinbercot/swift:3
 
 MAINTAINER Valentin Bercot <valent1.bercot@gmail.com>
 
