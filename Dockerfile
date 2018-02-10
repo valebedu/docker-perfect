@@ -1,6 +1,9 @@
-FROM valentinbercot/swift:3
+FROM valentinbercot/docker-swift
 
-MAINTAINER Valentin Bercot <valent1.bercot@gmail.com>
+LABEL name="docker-perfect" \
+    description="docker-perfect help you to build applications running with perfect on ubuntu systems." \
+    version="1.0.0" \
+    maintainer="Valentin Bercot <valent1.bercot@gmail.com>"
 
 # Install dependencies
 RUN apt-get update && \
