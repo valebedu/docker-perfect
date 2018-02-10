@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Clean useless dependencies in RELEASE environment
-if [[ $DB_ENVIRONMENT == "RELEASE" ]]; then
+if [[ $DB_ENVIRONMENT == "release" ]]; then
     apt-get purge \
         libmysqlclient-dev \
         clang pkg-config libmariadb2 libmariadb-client-lgpl-dev libcurl4-openssl-dev \
@@ -11,13 +11,13 @@ fi
 
 # Select right dependencies for choosen database
 case $DB_TYPE in
-    "MYSQL" ) DB_DEPENDENCIES="libmysqlclient-dev"
+    "mysql" ) DB_DEPENDENCIES="libmysqlclient-dev"
         ;;
-    "MARIA" ) DB_DEPENDENCIES="clang pkg-config libmariadb2 libmariadb-client-lgpl-dev  libcurl4-openssl-dev"
+    "maria" ) DB_DEPENDENCIES="clang pkg-config libmariadb2 libmariadb-client-lgpl-dev  libcurl4-openssl-dev"
         ;;
-    "POSTGRE" ) DB_DEPENDENCIES="libpq-dev"
+    "postgre" ) DB_DEPENDENCIES="libpq-dev"
         ;;
-    "MONGO" ) DB_DEPENDENCIES="libmongoc-dev"
+    "mongo" ) DB_DEPENDENCIES="libmongoc-dev"
         ;;
     * ) DB_DEPENDENCIES=""
         ;;
@@ -34,7 +34,7 @@ fi
 cd $PERFECT_TARGET_PATH/$PERFECT_TARGET_REPOSITORY
 
 # Clean build
-if [[ $PERFECT_ENVIRONMENT == "DEBUG" ]]; then
+if [[ $PERFECT_ENVIRONMENT == "debug" ]]; then
     swift build --clean build
     PERFECT_BUILD="debug"
 else
