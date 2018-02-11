@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning][semantic_versioning].
 
 ## Unreleased
 
-## 1.0.0 - 2018-10-20
+## 0.1.0 - 2018-02-11
 
 ### Added
 
