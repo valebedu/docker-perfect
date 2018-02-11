@@ -2,7 +2,7 @@ FROM valentinbercot/docker-swift
 
 LABEL name="docker-perfect" \
     description="docker-perfect help you to build applications running with perfect on ubuntu systems." \
-    version="1.0.0" \
+    version="0.1.0" \
     maintainer="Valentin Bercot <valent1.bercot@gmail.com>"
 
 # Install dependencies
